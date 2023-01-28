@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+     
+     DOBFormat('2022/02/04') ;
+
+     function DOBFormat(stuDOB){
+        var d=new Date(stuDOB)
+        
+        const months = ["January", "February", "March", "April", "May", 
+        "June", "July", "August", "September", "October", "November", "December"];
+        var NewFormat=d.getDate()+'th '+months[d.getMonth()]+' '+d.getFullYear()
+        console.log(NewFormat)
+     }
+    </script>
+
+    
+</body>
+</html>

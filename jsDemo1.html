@@ -1,0 +1,103 @@
+
+<html>
+    <head>
+        <title> JavaScript</title>
+
+        <script>
+            console.log('hello world');
+
+            function add(){
+                x=10;
+                y=20;
+                z=x+y;
+                console.log(z);
+            }
+            console.log('--------------line no 15-----------')
+            add();
+            console.log('--------------line no 17   -----------')
+
+            function sum(x,y){
+                
+                return x+y;
+            }
+
+           // alert('Hello Ramakant');
+
+            var a=sum(15,20);
+            console.log(a);
+            console.log('<h1>hii how r u</h1>')
+            function sum1(x,y){
+                var z= x+y;
+                console.log(z);
+            }
+            sum1(20,30);
+
+            let name = 'rama';
+            name='aswale'
+            let sname;
+            //const fname;
+           // let name='aswale'  //let cannt be redeclaried but var can be
+            
+
+            console.log(sname);
+
+            console.log('marks of the student')
+
+            console.log('-------------array--------------')
+
+            var arr=[10,20,'ram',30]
+            console.log(arr[0])
+            console.log(arr)
+
+            console.log('-------------object--------------')
+
+            var obj={ram:20,sham:40,ravi:30,rahul:50}
+            console.log(obj.rahul)
+            console.log(obj)
+            for(let a in obj){
+                console.log('name and marks are '+a +' '+obj[a])
+            }
+
+
+        </script>
+
+    </head>
+    <body>
+        <link rel="stylesheet" href="css/divstyle.css">
+        <div id="fixed"> </div>
+    
+        <div id="wrapper">
+            <div id="header">
+                <div id="logo"><a href="images/csslogo.png"></a></div>
+                <div id="banner">banner</div>
+            </div>
+            <div id="menu">
+                <div class="sub_menu"><a href="divhome.html">home</a></div>
+                    <div class="sub_menu"><a href="divcontact_us.html">contact us</a> </div>
+                    <div class="sub_menu"><a href="divabout_us.html">about us</a></div>
+                    <div class="sub_menu"><a href="divlogin.html">login</a></div>
+                    <div class="sub_menu"><a href="divRegistration.html">registration</a></div>
+            </div>
+            <div id="content">
+                <div id="left">
+                    <ul>
+                        <li>login manage</li>
+                        <li>reply manage</li>
+                        <li>comments manage</li>
+                        <li>contact manage</li>
+                        <li>user manage</li>
+                    </ul>
+                </div>
+                <div id="right"></div>
+            </div>
+            <div id="footer">
+                <ul>
+                <li>login </li>
+                <li>comments </li>
+                <li>contact us</li>
+               
+            </ul>
+        </div>
+        </div>
+    </body>
+    </html>

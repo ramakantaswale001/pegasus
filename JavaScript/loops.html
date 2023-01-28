@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+        switch(x){
+            case 1:
+
+            break;
+
+            case 2:
+
+            break;
+
+            default:
+
+        }
+
+        for(let i=0;i<10;i++){
+
+        }
+
+        if(x>0){
+            //code
+        }else if(x<0){
+            //code
+        }else{
+            //code
+        }
+
+
+        //for in loop
+        for(let key in object){
+            //code
+        }
+
+        //for each loop for array
+
+        let person=["amit","ravi","ram"]
+        person.forEach(myFunction)
+
+        function myFunction(value){
+            console.log(value)
+          }
+
+          //for in loop
+          let student= { 101:"rama",102:"ravi",103:"rahul",104:35}
+          console.log(student[104]+" outsite loop")
+
+          for(let key in student){
+            console.log(student[key])
+          }
+
+
+            // for of loop
+            let person=["amit","ravi","ram","shubham"]
+
+            for(let value of person){
+                console.log(value)
+            }
+            let name="ramakant aswale"
+            for(let value of name){
+                console.log(value)
+            }
+            let x=0
+            while(x<5){
+                console.log(x)
+                x++
+            }
+            console.log(x)
+
+
+            let letter=new Set(["a","b","x","5",7])
+            letter.add(8)
+            letter.add("z") //duplicate not allowed
+            letter.add("z")
+            letter.add("z")
+            console.log("sixe of set "+letter.size)
+
+            letter.forEach(myfun)
+
+            function myfun(value){
+                console.log("myfun "+value)
+            }
+
+            for(let value of letter){
+                console.log("forofloop "+value)
+            }
+            console.log(letter.values)
+
+            for(let value of letter){
+                console.log(value)
+            }
+
+            let fruit=new Map([
+                ["apple",400],
+                ["kiwi","100"],
+                ['banana',200],
+                [10,"20"]
+            ])
+            fruit.set("rama",8888)
+
+            console.log(fruit.get("kiwi")+" get method")
+            console.log(fruit.get(10)+" get method")
+            console.log(fruit.get("rama")+" get method")
+            console.log(fruit.size+" size")
+            fruit.delete(10)
+            console.log(fruit.has(10))
+            console.log(fruit.size+" size")
+            for(let value of fruit){
+                console.log(value)
+            }
+
+   */ 
+
+            
+   let fruit=new Map([
+                ["apple",400],
+                ["kiwi","100"],
+                ['banana',200],
+                [10,"20"]
+            ])
+            fruit.forEach(fun1)
+
+            function fun1(value,key){
+                let keyvalue=`${key} = ${value}`
+                console.log(keyvalue)
+            }
+
+            for (let key of fruit){
+                console.log(key)
+            }
+            for (let key of fruit.entries()){
+                console.log(key)
+            }
+    </script>
+</body>
+</html>

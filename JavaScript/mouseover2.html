@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+</head>
+<body>
+    <script>
+        function imgMouseOver(obj1){
+           obj1.src='../images/logo5.png'
+            console.log('inside mouseover fun')
+        }
+
+        function imgMouseOut(obj2){
+           obj2.src='../images/logo4.png'
+            console.log('inside mouseout     fun')
+        }
+
+    </script>
+     <img src="../images/logo4.png"
+      onmouseover="imgMouseOver(this)" 
+      onmouseout="imgMouseOut(this)"
+     style="border:1px solid red";
+     width="200"
+     height="100">
+
+</body>
+</html>

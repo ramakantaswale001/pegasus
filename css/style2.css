@@ -1,0 +1,135 @@
+body{
+    background-image: url('../banner/b5.jpeg');
+    background-attachment: fixed;
+}
+#wrapper{
+    border:2px double red;
+    width:800px;
+    height: 1000px;;
+    margin: 0 auto;
+}
+#header{
+    height: 15%;
+    width: 100%;
+    float: left;
+    background-color: blue;
+}
+    #logo{
+        height: 100%;
+        width: 20%;
+        float: left;
+        background-color: blueviolet;
+    }
+    #banner{
+        height: 100%;
+        width: 80%;
+        float: left;
+        background-color: olive;
+    }
+    
+#menu{
+    height: 5%;
+    width: 100%;
+    float: left;
+    
+    
+}
+#menu ul{
+        float: left;
+        list-style-type: none;
+        height: 100%;
+        width: 100%;
+    }
+    #menu li{
+        width: 16.58%;
+        height: 100%;
+        float: left;
+        background-color: green;
+        padding-left: 20px;
+        color: white;
+        padding-top: 15px;
+    }
+    #menu li:hover{
+       background-color: red;
+        color: black;
+        padding-bottom: 30px;
+    }
+#content{
+    height: 70%;
+    width: 100%;
+    background-color: aqua;
+    float: left;
+}
+    #left{
+        height: 100%;
+        width: 20%;
+        background-color: blue;
+        float: left;
+    }
+    #left ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+        }
+        #left li{
+                background-color:violet ;
+                width: 100%;
+                float: left;
+                height: 2%;
+               padding-left: 10px;
+               padding-bottom: 10px;
+                
+            }
+            #left li:hover{
+                background-color:red ;
+                color: #fff;
+                padding-left: 25px;
+                
+            }
+    #right{
+        height: 100%;
+        width: 80%;
+        background-color: skyblue;
+        float: left;
+    }
+     img{
+            position: absolute;
+           
+            float: left;
+        }
+#footer{
+    width: 100%;
+    height: 10%;
+    background-color: pink;
+    float: left;
+}
+#fixed{
+    width: 100%; 
+    height:30px;
+    background-color:aqua;
+    position: fixed;
+    top :0;left: 0;
+}
+#fixed ul{
+    float: left;
+    list-style-type: none;
+    height: 100%;
+    width: 100%;
+}
+#fixed li{
+    width: 8%;
+    height: 100%;
+    float: left;
+    background-color: green;
+    
+    color: white;
+   
+}
+#fixed li:hover{
+   background-color: red;
+    color: black;
+    padding-bottom: 30px;
+}
+    
+        

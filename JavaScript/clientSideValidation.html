@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+
+    function validation(formObj){
+        var firstName=document.getElementById('fname')
+        var lname=formObj.lastName.value
+        var email=formObj.email.value
+        var passward1=formObj.passward1.value
+        var passward2=formObj.passward2.value
+        var address=formObj.address.value
+        var mobileNo=reg.mobileNo.value
+        var date=formObj.dob_date.value
+        var month=formObj.dob_month.value
+        var year=formObj.dob_year.value
+     
+        var count=0;
+        if(firstName.value==''){
+            document.getElementById('error_fname').style.display='block'
+           
+            count++;
+        }else{
+            document.getElementById('error_fname').style.display='none'
+        }
+        
+        if(lname==''){
+            document.getElementById('error_lname').innerHTML='enter your last name';
+           
+            count++;
+        } else{
+            document.getElementById('error_lname').innerHTML='';
+        }
+
+     
+        if(email==''){
+            document.getElementById('error_email').innerHTML='enter your email id'
+            count++;
+        }else if(email.indexOf('@')==-1){
+            document.getElementById('error_email').innerHTML='enter correct email id'
+            count++;
+        }else{
+            document.getElementById('error_email').innerHTML=''
+        }
+        
+      
+        
+        if(passward1==''){
+            document.getElementById('error_passward1').innerHTML='enter your passward'
+            count++;
+        }else  if(passward2==''){
+            document.getElementById('error_passward2').innerHTML='enter your passward'
+            count++;
+        }else if(passward1!==passward2){
+            document.getElementById('error_passward2').innerHTML='enter correct passward'
+            count++;
+        }else{
+        document.getElementById('error_passward1').innerHTML=''
+        document.getElementById('error_passward2').innerHTML=''
+    }
+       
+        if(address==''){
+            document.getElementById('error_address').innerHTML='enter your address'
+            count++;
+        }else{
+            document.getElementById('error_address').innerHTML=''
+
+        }
+        if(mobileNo==''){
+            document.getElementById('error_mobileNo').innerHTML='enter your number'
+            count++;
+        }else if(mobileNo.length != 10){
+            document.getElementById('error_mobileNo').innerHTML='number you entered not equal to 10'
+            count++;
+        }else{
+            document.getElementById('error_mobileNo').innerHTML=''
+
+        }
+      
+        if(count==0){
+           
+            return true
+        }else{
+            alert(count+' boxes are empty')
+            return false
+        }
+        
+
+    }
+
+
+   </script>
+</head>
+<body>
+    <form name="reg" onsubmit="return validation(this)" action="../contact_us.html">
+        <table border="1" cellspacing="5" cellpadding="5">
+            <tr>
+                <td>First Name</td>
+                <td><input id="fname" type="text" name="firstName" size="30" value="">
+                <span id="error_fname" style="color: red;display: none;">enter your first name</span>
+            </td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input  type="text" name="lastName" size="30" value="" >
+                <span id="error_lname" style="color: red;display: block;"></span>
+            </td>
+            </tr>
+            <tr>
+                <td>Email ID</td>
+                <td><input  type="text" name="email" size="30"  value="">
+                <span id="error_email" style="color: red;display: block;"></span>
+            </td>
+            </tr>
+            <tr>
+
+                <td>Passward</td>
+                <td><input  type="password" name="passward1" size="30"  value="">
+                <span id="error_passward1" style="color: red;display: block;"></span>
+            </td>
+            </tr>
+            <tr>
+
+                <td>Reenter Passward</td>
+                <td><input  type="password" name="passward2" size="30"  value="">
+                <span id="error_passward2" style="color: red;display: block;"></span>
+            </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>
+                    <textarea  name="address"  cols="30" rows="5"></textarea>
+                    <span id="error_address" style="color: red;display: block;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male" checked>Male
+                    <input type="radio" name="gender" value="female">Female
+                    <input type="radio" name="gender" value="other">Other
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Courses</td>
+                <td>
+                    <input type="checkbox"  name="react" > React js
+                    <input type="checkbox" name="node" > Node js
+                    <input type="checkbox" name="javascript" > JavaScript
+                    <input type="checkbox" name="java" > JAVA
+                    <input type="checkbox" name="html" > HTML
+                </td>
+            </tr>
+           
+            <tr>
+                <td>DOB</td>
+                <td>
+                    <select name="dob_date" >
+                        <option >--select date--</option>
+                      <script>
+                         for(j=0;j<=31;j++){
+                             document.write('<option>'+j+'</option>')
+                         }
+                      </script>
+                    </select>
+                    <select name="dob_month" >
+                        <option >--select month--</option>
+                       <script>
+                         var month=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+                         for(index in month){
+                             document.write('<option>'+month[index]+'</option>')
+                         }
+                       </script>
+                    </select>
+                    <select name="dob_year" >
+                        <option >--select year--</option>
+                        <script>
+                         for(j=1990;j<2023;j++){
+                             document.write('<option>'+j+'</option>')
+                         }
+                        </script>
+                    </select>
+                    <span id="error_DOB" style="color: red;display: block;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td><input type="text"  name="mobileNo" value="">
+                    <span id="error_mobileNo" style="color: red;display: block;"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Photo</td>
+                <td><input type="file"  name="photo" value="">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit"  name="submit" value="Submit">
+                <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

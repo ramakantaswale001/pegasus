@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+</head>
+<body>
+<script>
+    function inputfocus(inputObj){
+       var inputValue= inputObj.value
+        console.log(inputValue)
+        if(inputValue=="enter your name"){
+            inputObj.value='';
+        }
+    }
+
+    
+    function inputblur(inputObj){
+        var inputValue= inputObj.value
+        console.log(inputValue)
+        if(inputValue==''){
+            inputObj.value="enter your name"
+        }
+    }
+</script> 
+    <input onfocus="inputfocus(this)" onblur="inputblur(this)" type="text" name="fname" value="enter your name" size="50"> 
+
+</body>
+</html>
